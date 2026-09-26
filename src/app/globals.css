@@ -1,0 +1,9 @@
+:root {
+  --bs-body-font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --bs-body-color: #17243b;
+  --bs-body-bg: #f5f7fb;
+}
+
+body {
+  min-height: 100vh;
+}
