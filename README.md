@@ -9,11 +9,15 @@ npm run dev
 
 Open http://localhost:3000. Copy `.env.example` to `.env.local` and set your
 Supabase project URL and publishable key. Never use a secret/service-role key.
-The layout preview runs without these values; database features require them.
+Set `SITE_URL=http://localhost:3000` locally. In Supabase Auth → URL Configuration,
+set Site URL to that address and allow `http://localhost:3000/auth/callback` and
+`http://localhost:3000/auth/callback?next=/auth/reset-password`.
+Open confirmation/reset links in the browser that requested them. Default Supabase
+email delivery is restricted; custom SMTP is needed for other recipients.
 
 The initial migration is already applied to the connected development project.
 For a fresh project, run the SQL in `supabase/migrations/` in filename order. It creates private tables with
-row-level security. Authentication screens are the next milestone.
+row-level security. The workspace requires a confirmed account.
 
 ```sh
 npm run check   # Formatting, lint, and TypeScript
