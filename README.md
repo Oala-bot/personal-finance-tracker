@@ -20,7 +20,8 @@ For a fresh project, run the SQL in `supabase/migrations/` in filename order. It
 row-level security. The workspace requires a confirmed account.
 
 ```sh
-npm run check   # Formatting, lint, and TypeScript
+npm run check   # Formatting, lint, TypeScript, and finance tests
+npm test        # Finance calculation tests
 npm run format  # Apply formatting
 npm run build  # Production build
 npm start      # Serve the production build
